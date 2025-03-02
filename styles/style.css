@@ -125,15 +125,20 @@
 .card__icon-button {
   background-color: transparent;
   border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid #000;
 }
 
 .card__like-button {
   min-inline-size: 130px;
-  padding: 12.5px 37px;
-}
-
-.button__text {
-
+  padding: 9px 17px;
 }
 
 .button-style {
@@ -142,6 +147,41 @@
   line-height: 12.6px;
   background-color: #fff;
   border: 2px solid #000;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow ease 0.3s;
+}
+
+.button__text {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.button-style:focus {
+  outline: none;
+}
+
+.button-style:focus-visible {
+  box-shadow: 2px 2px 0px 0px #000;
+}
+
+.button-style::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: inherit;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale ease-in-out 0.5s;
+}
+
+.button-style:hover::before {
+  scale: 1;
 }
 
 .footer {
@@ -159,6 +199,8 @@
 
 .footer__button-icon {
   inline-size: 21px;
+  fill: #fff;
+  mix-blend-mode: difference;
 }
 
 @media (width <= 375px) {
