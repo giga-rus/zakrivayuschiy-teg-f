@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -35,7 +34,7 @@
   align-items: center;
   inline-size: var(--section-width);
   block-size: 368px;
-  margin: 100px 0 102px;
+  margin: 100px 0;
   background-color: #fff;
   border: 2px solid #000;
   padding: clamp(7.5rem, 6.346rem + 4.923vw, 8.5rem) 0 120px;
@@ -75,11 +74,33 @@
   font-variation-settings: "wght" 700;
 }
 
+.card__image-block {
+  position: relative;
+  margin: 0;
+}
+
 .card__image {
   inline-size: 100%;
   object-fit: cover;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
+}
+
+.card__image-lable {
+  position: absolute;
+  top: clamp(1.5625rem, 1.4183rem + 0.6154vw, 1.6875rem);
+  right: clamp(0.6875rem, -0.3221rem + 4.3077vw, 1.5625rem);
+  font-family: var(--accent-font);
+  font-size: 14px;
+  opacity: 0.5;
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) {
+  .card__image-lable {
+    -webkit-text-stroke: 1px #fff;
+    text-shadow: none;
+  }
 }
 
 .card__decription {
@@ -92,4 +113,56 @@
 .card__text {
   font-size: 18px;
   line-height: 21px;
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 25px 25px;
+  gap: 12px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+  padding: 12.5px 37px;
+}
+
+.button__text {
+
+}
+
+.button-style {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 12.6px;
+  background-color: #fff;
+  border: 2px solid #000;
+}
+
+.footer {
+  margin: 50px 34.5px 100px;
+}
+
+.footer__button {
+  display: flex;
+  gap: 8px;
+  padding: 15px 18px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__button-icon {
+  inline-size: 21px;
+}
+
+@media (width <= 375px) {
+  .footer__button-icon {
+    inline-size: 28px;
+  }
 }

@@ -22,13 +22,32 @@
     <main class="main">
       <article class="card">
         <h3 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h3>
-        <img class="card__image" src="./images/image.jpg" alt="Изображение фургона на асфальте">
+        <figure class="card__image-block">
+          <img class="card__image" src="./images/image.jpg" alt="Изображение фургона на асфальте">
+          <figcaption class="card__image-lable">&lt;/HTML&gt;</figcaption>
+        </figure>
         <section class="card__decription">
           <p class="card__text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
           <p class="card__text">Место для ваших воспоминаний о начале обучения.</p>
         </section>
+        <div class="card__buttons">
+          <button class="card__icon-button" type="button">
+            <img src="./images/heart in paths.svg">
+          </button>
+          <button class="card__like-button button-style" type="button">
+            <span class="button__text">Like</span>
+          </button>
+        </div>
       </article>
     </main>
+    <footer class="footer">
+      <button class="footer__button button-style" type="button">
+        <svg class="footer__button-icon" viewBox="0 0 21 21">
+          <use href="./svg/floppy.svg#floppy">
+        </svg> 
+        <span class="button__text">Сохранить на память</span>
+      </button>
+    </footer>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
