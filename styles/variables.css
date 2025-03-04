@@ -2,7 +2,7 @@
 
 :root {
   --main-font: 'Inter-Variable', sans-serif;
-  --accent-font: 'PressStart2P-Regular', monospace;
+  --accent-font: 'PressStart2P', monospace;
   --title-weight: 700;
   --text-weight: 400;
   --section-width: min(100%, 696px);
