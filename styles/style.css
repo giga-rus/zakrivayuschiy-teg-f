@@ -115,6 +115,7 @@
 }
 
 .card__buttons {
+  block-size: 38px;
   display: flex;
   justify-content: flex-end;
   margin: 0 25px 25px;
@@ -184,7 +185,7 @@
 }
 
 .save-button {
-  margin: 0 34.5px 100px;
+  margin: 0 clamp(2.15625rem, -1.0453rem + 13.66vw, 11.25rem) 100px;
   display: flex;
   gap: 8px;
   padding: 15px 18px;
